@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, Image, StatusBar, FlatList } from 'react-native'
-import {COLORS, SIZES, FONTS, assets} from '../constants'
+import { SIZES, assets} from '../constants'
 import {CircleButton, RectButton, SubInfo, FocusStatusBar, DetailsDesc, DetailsBid} from '../components'
 import tw from 'twrnc'
 import React from 'react'
@@ -46,6 +46,9 @@ const Details = ({route, navigation}) => {
                   <SubInfo />
                   <View style={tw`p-5`}>
                       <DetailsDesc data={data}/>
+                      {data.bids.length > 0 && (
+                          <Text style={tw`font-semibold text-xl py-3 text-black`}>Current bid</Text>
+                      )}
                   </View>
               </React.Fragment>
           )}
