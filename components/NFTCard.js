@@ -9,16 +9,22 @@ import {SubInfo, EthPrice, NFTTitle} from './SubInfo'
 const NFTCard = ({data}) => {
   const navigation = useNavigation();
   return (
-    <View style={tw.style(`bg-[${COLORS.white}] rounded-[${SIZES.font}] mb-[${SIZES.extraLarge}] m-[${SIZES.base}]`, {...SHADOWS.dark})}>
-      <View style={tw.style('w-full h-[250px]')}>
+    <View style={tw.style(`bg-[${COLORS.white}] my-2 rounded-[${SIZES.font}px] `, {boxShadow: "2px 2px 40px black"})}>
+      <View style={tw.style('w-full h-[300px]')}>
         <Image 
         source={data.image}
         resizeMode="cover"
         style={tw.style(`w-full h-full`, {borderTopLeftRadius: SIZES.font})}
         />
         <CircleButton imgUrl={assets.heart} right={10} top={10}/>
+        <View style={tw`bg-white flex-col -mt-[6.5rem]`}>
+
         <SubInfo />
-      </View>
+        <View style={tw`w-full  p-[${SIZES.font}px]`}>
+          <NFTTitle title={data.name} subTitle={data.creator}/>
+        </View>
+        </View>
+      </View> 
     </View>
   )
 }

@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import tw from 'twrnc'
-import {SIZES, SHADOWS, FONTS, assets} from '../constants'
+import {SIZES, SHADOWS, FONTS,COLORS, assets} from '../constants'
 
 export const NFTTitle = () => {
   return (
@@ -38,18 +38,18 @@ export const People = () => {
 }
 export const EndDate = () => {
     return (
-      <View>
-        <Text>end date</Text>
+      <View style={tw.style(`bg-[${COLORS.white}] p-1 items-center max-w-[50%] jusity-center`, { ...SHADOWS.light})}>
+       <Text style={tw``}>End IN</Text>
+       <Text style={tw`font-bold text-lg`}>12h 30m</Text>
       </View>
     )
 }
 export const SubInfo = () => {
     return (
       <View 
-      style={tw.style(``,
+      style={tw.style(`items-center`,
       {width: '100%', 
       paddingHorizontal: SIZES.font, 
-      marginTop: -SIZES.extraLarge, 
       flexDirection: "row", 
       justifyContent: "space-between"})}
       >
