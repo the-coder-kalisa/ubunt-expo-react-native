@@ -3,17 +3,23 @@ import React from 'react'
 import tw from 'twrnc'
 import {SIZES, SHADOWS, FONTS,COLORS, assets} from '../constants'
 
-export const NFTTitle = () => {
+export const NFTTitle = ({title, subTitle}) => {
   return (
     <View>
-      <Text>SubInfo</Text>
+      <Text style={tw`font-bold text-lg`}>{title}</Text>
+      <Text style={tw`font-semibold`}>{subTitle}</Text>
     </View>
   )
 }
-export const EthPrice = () => {
+export const EthPrice = ({price}) => {
     return (
-      <View>
-        <Text>price</Text>
+      <View style={tw`flex-row items-center`}>
+        <Image 
+        source={assets.eth}
+        resizeMode="contain"
+        style={tw`w-[20px] h-[20px] mr-[2px]`}
+        />
+        <Text >{price}</Text>
       </View>
     )
 }

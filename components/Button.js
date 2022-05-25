@@ -15,11 +15,14 @@ export const CircleButton = ({imgUrl, handlePress, ...props}) => {
   )
 }
 
-export const RectButton = () => {
+export const RectButton = ({minWidth, handlePress, ...props}) => {
     return (
-      <View>
-        <Text>RectButton</Text>
-      </View>
+      <TouchableOpacity
+      style={tw`rounded-full bg-[${COLORS.primary}] items-center justify-center p-2 px-7 `}
+      onPress={handlePress}
+      >
+        <Text style={tw`text-white`}>Place a bid</Text>
+      </TouchableOpacity>
     )
   }
   
