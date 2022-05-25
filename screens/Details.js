@@ -44,6 +44,9 @@ const Details = ({route, navigation}) => {
               <React.Fragment>
                   <DetailsHeader data={data} navigation={navigation}/>
                   <SubInfo />
+                  <View style={tw`p-5`}>
+                      <DetailsDesc data={data}/>
+                  </View>
               </React.Fragment>
           )}
           />
