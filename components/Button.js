@@ -5,7 +5,7 @@ import { COLORS, SIZES, FONTS, SHADOWS } from '../constants'
 
 export const CircleButton = ({imgUrl, handlePress, ...props}) => {
   return (
-    <TouchableOpacity onPress={handlePress} style={tw.style(`h-[40px] w-[40px] absolute rounded-[${SIZES.extraLarge}] justify-center bg-[${COLORS.white}]`,{...SHADOWS.light, ...props})}>
+    <TouchableOpacity onPress={handlePress} style={tw.style(`h-[40px] w-[40px] absolute rounded-[${SIZES.extraLarge}] justify-center items-center bg-[${COLORS.white}]`,{...SHADOWS.light, ...props})}>
       <Image 
       source={imgUrl}
       resizeMode="contain"

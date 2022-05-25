@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native'
 import { COLORS, SIZES, SHADOWS, assets } from '../constants'
 import {CircleButton} from './Button'
 import tw from 'twrnc'
+import {SubInfo, EthPrice, NFTTitle} from './SubInfo'
+
 const NFTCard = ({data}) => {
   const navigation = useNavigation();
   return (
@@ -15,6 +17,7 @@ const NFTCard = ({data}) => {
         style={tw.style(`w-full h-full`, {borderTopLeftRadius: SIZES.font})}
         />
         <CircleButton imgUrl={assets.heart} right={10} top={10}/>
+        <SubInfo />
       </View>
     </View>
   )
